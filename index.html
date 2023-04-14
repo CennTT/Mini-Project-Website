@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="index.css">
+    <link href='https://fonts.googleapis.com/css?family=Catamaran' rel='stylesheet'>
+    <script src="myscripts.js"></script>
+</head>
+
+<body onload=getName()>
+    <header>
+        <nav>
+            <img class="logo" src="images/logo.png" alt="logo">
+            <ul class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Our Profile</a></li>
+                <li><a href="#">Achievement</a></li>
+                <li><a href="#message">Message Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <div class="welcome-container">
+                <h2> Hi <span id="name"></span>, Welcome to Website</h2>
+                <p>Ini adalah webstie latihan pertama</p>
+                <img src="images/background.jpg" alt="">
+            </div>
+        </section>
+
+        <section class="facilitation">
+            <div class="facilitation-container">
+                <h3>Our Facilitation</h3>
+                <div class="profile-images">
+                    <div class="profiles">
+                        <img src="images/teacher.jpg" alt="Profile Image 1">
+                        <p>Profesional Teacher</p>
+                    </div>
+                    <div class="profiles">
+                        <img src="images/field.jpeg" alt="Profile Image 1">
+                        <p>Sport Field</p>
+
+                    </div>
+                    <div class="profiles">
+                        <img src="images/classroom.jpeg" alt="Profile Image 1">
+                        <p>Classroom</p>
+
+                    </div>
+                    <div class="profiles">
+                        <img src="images/library.jpg" alt="Profile Image 1">
+                        <p>Library</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section" id="message">
+            <h3>Message Us</h3>
+            <div class="form-value">
+                <form class="form" name="form" onsubmit="return validateForm()">
+                    <div class="form-group">
+                        <label for="name">Nama</label>
+                        :<input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthdate">Tanggal</label>
+                        :<input type="date" id="birthdate" name="birthdate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Jenis Kelamin</label>
+                        :<input type="radio" id="male" name="gender" value="Laki-laki" required>
+                        <label for="male">Laki-laki</label>
+                        <input type="radio" id="female" name="gender" value="Perempuan" required>
+                        <label for="female">Perempuan</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan</label>
+                        :<textarea id="message" name="message" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+
+                <div class="box">
+                    <p><b>Nama:</b>  <span id="sender-full-name"></span></p>
+                    <p><b>Tanggal Lahir:</b> <span id="sender-birth-date"></span></p>
+                    <p><b>Jenis Kelamin:</b> <span id="sender-gender"></span></p>
+                    <p><b>Pesan:</b> <span id="sender-messages"></span></p>
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Created by Vincent</p>
+    </footer>
+
+</body>
+
+</html>
